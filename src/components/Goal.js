@@ -7,15 +7,9 @@ import box_string from "../assets/box-string-a.svg"
 import {motion} from "framer-motion"
 
 const GoalObj = styled.div`
-font-family:'Fresh-Steak';
-min-height: 10vh;
+    font-family:'Fresh-Steak';
+    min-height: 10vh;
 `
-
-// const GoalName = styled.h2`
-// font-family:'Fresh-Steak';
-// color:#fce74a;
-// font-size: 3.1vh;
-// `
 
 
 const Goal = ({ prompt, setSelectedGoal, completed }) => {
@@ -49,7 +43,6 @@ const Goal = ({ prompt, setSelectedGoal, completed }) => {
                     }}
                     style={{ height: "20vh" }}
                 />
-                {/* <GoalName>{prompt.name}</GoalName> */}
                 {completed.includes(prompt.name) ? <p>Correct!</p> : null}
             </GoalObj>
 
