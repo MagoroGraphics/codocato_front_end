@@ -12,7 +12,7 @@ const LContainer = styled.div`
     background-repeat: no-repeat;
     overflow: hidden;
     background-color:#368DCE;
-    `
+`
 
 const IntroAnimationContainer = ({setAppState}) => {
 
@@ -25,10 +25,10 @@ const IntroAnimationContainer = ({setAppState}) => {
     }, [])
 
     return(
-<>
-        <LContainer bgimage = {`http://localhost:8080/animation/codocato-titles.json}`}>
-            <IntroAnimation/>
-        </LContainer>
+        <>
+            <LContainer bgimage = {`http://localhost:8080/animation/codocato-titles.json}`}>
+                <IntroAnimation/>
+            </LContainer>
         </>
     )
 }
