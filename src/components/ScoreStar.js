@@ -4,9 +4,9 @@ import star from "../assets/star1.svg"
 import styled from "styled-components"
 
 const StyledStart = styled.div`
-height: 100%;
-width:100%;
-cursor: pointer;
+    height: 100%;
+    width:100%;
+    cursor: pointer;
 `
 
 const ScoreStar = ({ setAppState, nextState }) => {
