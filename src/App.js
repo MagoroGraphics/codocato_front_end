@@ -65,35 +65,46 @@ function App() {
 
   return (
     <>
-    {/* <AnimatedCursor
-        innerSize={20}
-        outerSize={8}
-        color='252, 231, 74'
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={20}
-        trailingSpeed={20}
-        clickables={[
-          'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
-          'button',
-          '.link'
-        ]} 
-      /> */}
       {appState === "IntroAnimationContainer" && <IntroAnimationContainer setAppState={setAppState}/>}
-      {appState === "ProfileContainer" && <ProfileContainer savedProfiles={savedProfiles} setCurrentProfile={setCurrentProfile} addNewProfile={addNewProfile} setAppState={setAppState} setCurrentLesson={setCurrentLesson} currentLesson={currentLesson} setCurrentEnrollment={setCurrentEnrollment} />}
-      {appState === "LessonContainer" && <LessonContainer currentLesson={currentLesson} setAppState={setAppState} />}
-      {appState === "AnimationContainer" && <AnimationContainer setAppState={setAppState} currentLesson={currentLesson} appState={appState} />}
-      {appState === "GameAnimationContainer" && <GameAnimationContainer setAppState={setAppState} currentLesson={currentLesson} appState={appState} />}
-      {appState === "GameContainer" && <GameContainer setAppState={setAppState} updateCurrentLesson={updateCurrentLesson} currentLesson={currentLesson} />}
-      {appState === "GameWinAnimationContainer" && <GameWinAnimationContainer setAppState={setAppState} currentLesson={currentLesson} appState={appState} />}
+
+      {appState === "ProfileContainer" && <ProfileContainer 
+        savedProfiles={savedProfiles} 
+        setCurrentProfile={setCurrentProfile} 
+        addNewProfile={addNewProfile} 
+        setAppState={setAppState} 
+        setCurrentLesson={setCurrentLesson} 
+        currentLesson={currentLesson} 
+        setCurrentEnrollment={setCurrentEnrollment} 
+      />}
+
+      {appState === "LessonContainer" && <LessonContainer 
+        currentLesson={currentLesson} 
+        setAppState={setAppState} 
+      />}
+
+      {appState === "AnimationContainer" && <AnimationContainer 
+        setAppState={setAppState} 
+        currentLesson={currentLesson} 
+        appState={appState} 
+      />}
+
+      {appState === "GameAnimationContainer" && <GameAnimationContainer 
+        setAppState={setAppState} 
+        currentLesson={currentLesson} 
+        appState={appState} 
+      />}
+
+      {appState === "GameContainer" && <GameContainer 
+        setAppState={setAppState} 
+        updateCurrentLesson={updateCurrentLesson} 
+        currentLesson={currentLesson} 
+      />}
+
+      {appState === "GameWinAnimationContainer" && <GameWinAnimationContainer 
+        setAppState={setAppState} 
+        currentLesson={currentLesson} 
+        appState={appState} 
+      />}
 
     </>
   );
