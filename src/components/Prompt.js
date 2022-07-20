@@ -6,14 +6,14 @@ const ModalWrapper = styled.div`
 `
 
 const ImagePrompt = styled.img`
-height : 30vh;
-position: absolute;
-top: ${props => `${props.positionX}vh`};
-left:${props => `${props.positionY}vw`};
-cursor: pointer;
-&:hover {
-    height: 31vh;
-}
+    height : 30vh;
+    position: absolute;
+    top: ${props => `${props.positionX}vh`};
+    left:${props => `${props.positionY}vw`};
+    cursor: pointer;
+    &:hover {
+        height: 31vh;
+    }
 `
 
 const Prompt = ({ prompt, setClickedPrompts, clickedPrompts }) => {
