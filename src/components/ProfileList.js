@@ -5,23 +5,28 @@ import styled from 'styled-components';
 import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const Column = styled.div`
-display: flex;
-flex-direction: column;
-padding: 5vh;
-background-color: #38B6FF;
-border-radius:5vh 0vh 0vh 5vh;
-margin: 0.1vh;
-overflow: hidden ;
-max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh;
+    background-color: #38B6FF;
+    border-radius:5vh 0vh 0vh 5vh;
+    margin: 0.1vh;
+    overflow: hidden ;
+    max-height: 70vh;
 `
 const SelectProfileTitleStyled = styled.h3`
-color: #FCE74A;
-font-weight: bold;
-font-size:3vh;
-font-family: 'Fresh-Steak';
+    color: #FCE74A;
+    font-weight: bold;
+    font-size:3vh;
+    font-family: 'Fresh-Steak';
 `
 
-const ProfileList = ({ savedProfiles, setCurrentProfile, setCurrentLesson, setCurrentEnrollment }) => {
+const ProfileList = ({ 
+    savedProfiles, 
+    setCurrentProfile, 
+    setCurrentLesson, 
+    setCurrentEnrollment 
+}) => {
 
  const [active, setActive] = useState({})
 
@@ -37,7 +42,13 @@ const ProfileList = ({ savedProfiles, setCurrentProfile, setCurrentLesson, setCu
     }
 
     const profileNodes = savedProfiles.map((profile, index) => {
-        return <ProfileItem onProfileClick={onProfileClick} profile={profile} key={index} active= {active} setActive= {setActive} />
+        return <ProfileItem 
+            onProfileClick={onProfileClick} 
+            profile={profile} 
+            key={index} 
+            active= {active} 
+            setActive= {setActive} 
+        />
     }
     )  
     
