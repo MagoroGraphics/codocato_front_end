@@ -4,51 +4,51 @@ import Avatar from "./Avatar"
 
 
 const NewProfileColumn = styled.div`
-display: flex;
-flex-direction: column;
-padding: 8vh 8vh 0vh 8vh;
-margin: auto;
-tex-align:center;
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 8vh 0vh 8vh;
+    margin: auto;
+    text-align:center;
 `
 
 const CreateButtonStyled = styled.input`
-background-color: #FF6666;
-border-radius: 100%;
-padding: 2vh;
-border:0px;
-cursor:pointer;
-margin: 0vh;
-font-family: 'Fresh-Steak';
-color:#fff;
-font-size:3vh;
-&:hover{
-    background-color: #FF3333;
+    background-color: #FF6666;
+    border-radius: 100%;
+    padding: 2vh;
+    border:0px;
+    cursor:pointer;
+    margin: 0vh;
+    font-family: 'Fresh-Steak';
     color:#fff;
-}
+    font-size:3vh;
+    &:hover{
+        background-color: #FF3333;
+        color:#fff;
+    }
 `
 
 const InputTextBoxStyled = styled.input`
-border-radius: 1vh;
-border-width: 1vh;
-border-color:#38B6FF;
-margin:3vh;
-width:30vh;
-height:5vh;
-font-family: 'Fresh-Steak';
-font-size:3vh;
+    border-radius: 1vh;
+    border-width: 1vh;
+    border-color:#38B6FF;
+    margin:3vh;
+    width:30vh;
+    height:5vh;
+    font-family: 'Fresh-Steak';
+    font-size:3vh;
 `
 
 const AvatarRadioStyled = styled.input`
-position: absolute;
-opacity: 0;
+    position: absolute;
+    opacity: 0;
 `
 
 const AvatarImageSelectorStyled = styled.img`
-cursor:pointer;
-margin: 1vh;
-width:25vh;
-padding-left: 4vh;
-padding-right: 4vh;
+    cursor:pointer;
+    margin: 1vh;
+    width:25vh;
+    padding-left: 4vh;
+    padding-right: 4vh;
 `
 
 const ChooseAvatarLabelStyled = styled.label`
@@ -60,51 +60,51 @@ const ChooseAvatarLabelStyled = styled.label`
 `
 
 const CreateProfileTitleStyled = styled.h2`
-color: #FCE74A;
-font-weight: bold;
-font-size: 5vh;
-padding:0;
-margin:0;
+    color: #FCE74A;
+    font-weight: bold;
+    font-size: 5vh;
+    padding:0;
+    margin:0;
 `
 
 const RadioButtonsContainerStyled = styled.div`
-display:flex;
-flex-direction:row;
-margin:3vh;
+    display:flex;
+    flex-direction:row;
+    margin:3vh;
 `
 const InputTextWrapper = styled.div`
-display:flex;
-justify-content:center;
+    display:flex;
+    justify-content:center;
 `
 
 const CreateButtonWrapper = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:center;
-padding:0;
-margin:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding:0;
+    margin:0;
 `
 
 const CreateProfileTitleWrapper = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:center;
-padding:0;
-margin:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding:0;
+    margin:0;
 `
 
 const ChooseAvatarTitleWrapper = styled.div`
-display:flex;
-flex-direction:row;
-justify-content:center;
-padding:0;
-margin:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    padding:0;
+    margin:0;
 `
 
 const AnimationBlock = styled.div`
-width: 13vw;
-padding: 0;
-margin: 0;
+    width: 13vw;
+    padding: 0;
+    margin: 0;
 `
 
 const NewProfileForm = ({ addNewProfile }) => {
