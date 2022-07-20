@@ -6,26 +6,28 @@ import ScoreStar from "../components/ScoreStar"
 import Modal from "react-modal"
 
 const Wrapper = styled.div`
-background-image: repeating-linear-gradient(45deg, #368DCE 0, #BEDEF4 2.5px, transparent 0, transparent 50%);
-background-size: 16px 16px;
-background-color: #bedef4;
-height: 100vh;
-width: 100vw;
-display: flex;
-
+    background-image: repeating-linear-gradient(45deg,
+        #368DCE 0, 
+        #BEDEF4 2.5px, 
+        transparent 0, 
+        transparent 50%);
+    background-size: 16px 16px;
+    background-color: #bedef4;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
 `
 
 const GameWrapper = styled.div`
-padding-top: 20vh;
-max-width: 50vw;
-margin: auto;
-border: solid 2vw #98bbee;
-border-radius: 5vw;
-background-color: #FF99CC;
-display: flex;
-justify-content: center;
-padding: 5vh;
-
+    padding-top: 20vh;
+    max-width: 50vw;
+    margin: auto;
+    border: solid 2vw #98bbee;
+    border-radius: 5vw;
+    background-color: #FF99CC;
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
 `
 
 const StarContainer = styled.div`
@@ -34,14 +36,14 @@ const StarContainer = styled.div`
 `
 
 const NodeContainer = styled.div`
-display: flex;
-max-width: 45vw;
-flex-wrap: wrap;
-justify-content: space-evenly;
-align-items: center;
-align-content: center;
-gap: 5vw;
-row-gap: 10vh;
+    display: flex;
+    max-width: 45vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    gap: 5vw;
+    row-gap: 10vh;
 `
 
 const GameContainer = ({ setAppState, updateCurrentLesson, currentLesson }) => {
@@ -77,11 +79,22 @@ const GameContainer = ({ setAppState, updateCurrentLesson, currentLesson }) => {
     const promptsAndGoals = []
 
     currentLesson.prompts.map((prompt, index) => {
-        const newPrompt = <GamePrompt prompt={prompt} id="prompt" grid-area="b" setSelectedPrompt={setSelectedPrompt} completed={completed} />
+        const newPrompt = <GamePrompt 
+            prompt={prompt} 
+            id="prompt" 
+            grid-area="b" 
+            setSelectedPrompt={setSelectedPrompt} 
+            completed={completed} 
+        />
         promptsAndGoals.unshift(newPrompt)
 
-        const newGoal = <Goal prompt={prompt} id="prompt" grid-area="a" setSelectedGoal=
-            {setSelectedGoal} completed={completed} />
+        const newGoal = <Goal 
+            prompt={prompt} 
+            id="prompt" 
+            grid-area="a" 
+            setSelectedGoal={setSelectedGoal} 
+            completed={completed} 
+        />
 
         promptsAndGoals.push(newGoal)
     })
