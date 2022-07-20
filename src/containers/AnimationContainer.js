@@ -2,9 +2,6 @@ import React, {useEffect} from "react"
 import styled from "styled-components"
 import Animation from "../components/Animation"
 
-
-// CHARACTER APPEARING IN CENTRE, NEEDS TO ALIGN LEFT, ALSO REPEATING UNDERNEATH
-
 const LContainer = styled.div`
     background-image: ${props => `url(${props.bgimage})`};
     background-size: cover;
@@ -14,7 +11,6 @@ const LContainer = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-
 `
 
 const AnimationContainer = ({appState, setAppState, currentLesson}) => {
@@ -34,11 +30,9 @@ const AnimationContainer = ({appState, setAppState, currentLesson}) => {
     
     return (
         <>
-        <LContainer bgimage = {`http://localhost:8080/lesson_bgs/${currentLesson.bgImgUrl}`}>
-            <Animation appState = {appState}/>
-
-        </LContainer>
-        {/* <button onClick = {handleClick}>Continue</button> */}
+            <LContainer bgimage = {`http://localhost:8080/lesson_bgs/${currentLesson.bgImgUrl}`}>
+                <Animation appState = {appState}/>
+            </LContainer>
         </>
     )
 }
