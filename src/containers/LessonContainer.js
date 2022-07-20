@@ -20,28 +20,27 @@ const StarContainer = styled.div`
 `
 
 const PromptContainer = styled.div`
-display: flex;
-justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 `
 
 const Button = styled.button`
-position: relative;
-left: 75vw;
-top: 65vh;
-background-color: #368DCE;
-border-radius: 100%;
-padding: 6vh;
-border:0px;
-cursor:pointer;
-margin: 0vh;
-font-family: 'Fresh-Steak';
-color:#fff;
-font-size:5vh;
-&:hover{
-    background-color: #1267a8;
+    position: relative;
+    left: 75vw;
+    top: 65vh;
+    background-color: #368DCE;
+    border-radius: 100%;
+    padding: 6vh;
+    border:0px;
+    cursor:pointer;
+    margin: 0vh;
+    font-family: 'Fresh-Steak';
     color:#fff;
-}
-
+    font-size:5vh;
+    &:hover{
+        background-color: #1267a8;
+        color:#fff;
+    }
 `
 
 const LessonContainer = ({ currentLesson, setAppState }) => {
@@ -59,7 +58,14 @@ const LessonContainer = ({ currentLesson, setAppState }) => {
 
 
     const promptNodes = currentLesson.prompts.map((prompt, index) => {
-        return <Prompt prompt={prompt} setClickedPrompts={setClickedPrompts} clickedPrompts={clickedPrompts} key={index} />
+        return (
+        <Prompt 
+            prompt={prompt} 
+            setClickedPrompts={setClickedPrompts} 
+            clickedPrompts={clickedPrompts} 
+            key={index} 
+        />
+        )
     })
 
     const handleClick = () => {
@@ -71,13 +77,12 @@ const LessonContainer = ({ currentLesson, setAppState }) => {
 
 
             <LContainer bgimage={`http://localhost:8080/lesson_bgs/${currentLesson.bgImgUrl}`}>
-
                 <PromptContainer>
                     {promptNodes}
                 </PromptContainer>
 
                 <div>
-                {clickedPrompts.length ==4? <Button onClick = {handleClick}>continue</Button> : null}
+                    {clickedPrompts.length ==4? <Button onClick = {handleClick}>continue</Button> : null}
                 </div>
             </LContainer>
 
@@ -98,7 +103,11 @@ const LessonContainer = ({ currentLesson, setAppState }) => {
                 }}
             >
                 <StarContainer>
-                    {clickedPrompts.length == 4 ? <ScoreStar setAppState={setAppState} nextState = "GameAnimationContainer" /> : null}
+                    {clickedPrompts.length == 4 ? 
+                    <ScoreStar 
+                        setAppState={setAppState} 
+                        nextState = "GameAnimationContainer" 
+                    /> : null}
                 </StarContainer>
             </Modal>
         </>
