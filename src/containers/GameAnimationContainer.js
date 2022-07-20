@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Animation from "../components/Animation"
 
 const LContainer = styled.div`
-background-image: ${props => `url(${props.bgimage})`};
+    background-image: ${props => `url(${props.bgimage})`};
     background-size: cover;
     height: 100vh;
     max-height: 100vh;
@@ -11,7 +11,6 @@ background-image: ${props => `url(${props.bgimage})`};
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-
 `
 
 const GameAnimationContainer = ({appState, setAppState, currentLesson}) => {
@@ -32,10 +31,10 @@ const handleClick = () => {
 
 return (
     <>
-    <LContainer bgimage = {`http://localhost:8080/lesson_bgs/${currentLesson.bgImgUrl}`}>
-        <Animation appState = {appState}/>
-    </LContainer>
-    <button onClick = {handleClick}>Continue</button>
+        <LContainer bgimage = {`http://localhost:8080/lesson_bgs/${currentLesson.bgImgUrl}`}>
+            <Animation appState = {appState}/>
+        </LContainer>
+        <button onClick = {handleClick}>Continue</button>
     </>
 )
 }
